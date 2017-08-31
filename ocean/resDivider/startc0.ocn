@@ -1,0 +1,9 @@
+simulator('spectre)
+design("./ocean/resDivider/netlist")
+resultsDir("./ocean/resDivider/results")
+
+
+desVar("vd" 3)
+desVar("r0" 1000)
+
+analysis('dc ?saveOppoint t ?oppoint "rawfile")

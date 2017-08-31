@@ -1,0 +1,30 @@
+;setting up the environment
+;specify circuit simulator
+simulator('spectre)
+;load the input netlist
+design("/work/yc923/ocean/autoCP/netlist")
+
+;set up directory to save simulation results
+outputDir="/work/yc923/ocean/autoCP/results"
+resultDir(ourputDir)
+
+;assign parameter values
+;the peak voltage of the input ac signal, in Volt
+desVar("vinp" 0.300)
+;set initial value of the floating nodes
+ic("VF0" 0.300 "VF1" 0.300)
+
+;set up transient simulation
+;analysis('dc ?saveOppoint t ?oppoint "rawfile")
+analysis('tran ?stop 10n)
+
+;actually run the simulation
+run
+
+;selecting simulation result
+selectResults('tran)
+;saving result to file
+;specify the location of the outputfile
+;sample the output transient waveform
+outSig=sample(v("VOUT") 0 10n "linear" 0.1n)
+ocnPrint( ?output "/work/yc923/ocean/autoCP/results/vout" ?numberNotation 'scientific outSig))

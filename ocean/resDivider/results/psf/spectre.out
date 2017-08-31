@@ -1,0 +1,181 @@
+
+Cadence (R) Virtuoso (R) Spectre (R) Circuit Simulator
+Version 12.1.1.115.isr13 32bit -- 27 Aug 2013
+Copyright (C) 1989-2013 Cadence Design Systems, Inc. All rights reserved worldwide. Cadence, Virtuoso and Spectre are registered trademarks of Cadence Design Systems, Inc. All others are the property of their respective holders.
+
+Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
+
+User: yc923   Host: bumba.ece.cornell.edu   HostID: FD800E80   PID: 9147
+Memory  available: 9.0216 GB  physical: 12.4791 GB
+CPU Type: Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz
+          Processor PhysicalID CoreID Frequency
+              0         0        0     1600.0
+              1         0        1     1600.0
+              2         0        2     1600.0
+              3         0        8     1600.0
+              4         0        9     1600.0
+              5         0        10     1600.0
+              6         1        0     1600.0
+              7         1        1     1600.0
+              8         1        2     1600.0
+              9         1        8     1600.0
+             10         1        9     1600.0
+             11         1        10     1600.0
+             12         0        0     1867.0
+             13         0        1     1600.0
+             14         0        2     1600.0
+             15         0        8     2668.0
+             16         0        9     1600.0
+             17         0        10     1600.0
+             18         1        0     1600.0
+             19         1        1     1600.0
+             20         1        2     1600.0
+             21         1        8     1600.0
+             22         1        9     1600.0
+             23         1        10     1600.0
+
+
+Simulating `input.scs' on bumba.ece.cornell.edu at 2:26:06 PM, Tue Aug 22, 2017 (process id: 9147).
+Current working directory: /work/yc923/ocean/resDivider
+Command line:
+    /opt/cadence/mmsim/tools/spectre/bin/32bit/spectre input.scs  \
+        +escchars +log results/psf/spectre.out +inter=mpsc  \
+        +mpssession=spectre0_8847_1 -format psfxl -raw results/psf  \
+        +lqtimeout 900 -maxw 5 -maxn 5
+spectre pid = 9147
+
+Loading /opt/cadence/mmsim/tools.lnx86/cmi/lib/5.0/libinfineon_sh.so ...
+Loading /opt/cadence/mmsim/tools.lnx86/cmi/lib/5.0/libphilips_o_sh.so ...
+Loading /opt/cadence/mmsim/tools.lnx86/cmi/lib/5.0/libphilips_sh.so ...
+Loading /opt/cadence/mmsim/tools.lnx86/cmi/lib/5.0/libsparam_sh.so ...
+Loading /opt/cadence/mmsim/tools.lnx86/cmi/lib/5.0/libstmodels_sh.so ...
+Reading file:  /work/yc923/ocean/resDivider/input.scs
+Reading link:  /opt/cadence/mmsim
+Reading file:  /opt/cadence/MMSIM121/tools.lnx86/spectre/etc/configs/spectre.cfg
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_bjt_v121.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_bjt_v121.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_mimcap_v101.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_mimcap_v101.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_reg18bpw_v123.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_reg18bpw_v123.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_reg33bpw_v123.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_reg33bpw_v123.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_res_v141.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_res_v141.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_res_v141.va
+Reading link:  /opt/cadence/mmsim/tools.lnx86/spectre/etc/ahdl/discipline.h
+Reading file:  /opt/cadence/MMSIM121/tools.lnx86/spectre/etc/ahdl/disciplines.vams
+Reading link:  /opt/cadence/mmsim/tools.lnx86/spectre/etc/ahdl/constants.h
+Reading file:  /opt/cadence/MMSIM121/tools.lnx86/spectre/etc/ahdl/constants.vams
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_lvt18_v113.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_lvt33_v113.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_reg18_v124.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_reg18_v124.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_reg33_v114.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_reg33_v114.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_zvt18_v121.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_zvt18_v121.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_zvt33_v113.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/core_rf_v2d4.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/core_rf_v2d4.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/io_rf_v2d3.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/io_rf_v2d3.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/l_slcr20k_rf_v2d3.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/l_slcr20k_rf_v2d3.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mimcapm_rf_v2d3.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mimcapm_rf_v2d3.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mim.va
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/pad_rf_v2d3.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/pad_rf_v2d3.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/rnhr_rf_v2d4.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/rnhr_rf_v2d4.mdl.scs
+
+Warning from spectre in `rnhr_rf', during circuit read-in.
+    WARNING (SFE-2296): "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/./rnhr_rf_v2d4.mdl.scs" 8: The inline subckt definition `rnhr_rf' does not contain any inline components. The `inline' qualifier will therefore be ignored.
+
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/rnnpo_rf_v2d4.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/rnnpo_rf_v2d4.mdl.scs
+
+Warning from spectre in `rnnpo_rf', during circuit read-in.
+    WARNING (SFE-2296): "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/./rnnpo_rf_v2d4.mdl.scs" 8: The inline subckt definition `rnnpo_rf' does not contain any inline components. The `inline' qualifier will therefore be ignored.
+
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/rnppo_rf_v2d4.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/rnppo_rf_v2d4.mdl.scs
+
+Warning from spectre in `rnppo_rf', during circuit read-in.
+    WARNING (SFE-2296): "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/./rnppo_rf_v2d4.mdl.scs" 8: The inline subckt definition `rnppo_rf' does not contain any inline components. The `inline' qualifier will therefore be ignored.
+
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/vardiop_rf_v2d3.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/vardiop_rf_v2d3.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/varmis_18_rf_v2d3.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/varmis_18_rf_v2d3.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_diode_v113.mdl.scs
+
+Time for NDB Parsing: CPU = 147.977 ms, elapsed = 177.434 ms.
+Time accumulated: CPU = 147.977 ms, elapsed = 177.434 ms.
+Peak resident memory used = 31.4 Mbytes.
+
+
+Time for Elaboration: CPU = 21.996 ms, elapsed = 23.561 ms.
+Time accumulated: CPU = 169.973 ms, elapsed = 201.165 ms.
+Peak resident memory used = 33.8 Mbytes.
+
+
+Time for EDB Visiting: CPU = 0 s, elapsed = 275.85 us.
+Time accumulated: CPU = 169.973 ms, elapsed = 201.587 ms.
+Peak resident memory used = 34.1 Mbytes.
+
+
+Circuit inventory:
+              nodes 2
+           resistor 2     
+            vsource 1     
+
+
+Time for parsing: CPU = 1.999 ms, elapsed = 1.74308 ms.
+Time accumulated: CPU = 171.972 ms, elapsed = 203.469 ms.
+Peak resident memory used = 34.7 Mbytes.
+
+Entering remote command mode using MPSC service (spectre, ipi, v0.0, spectre0_8847_1, ).
+
+Warning from spectre.
+    WARNING (SPECTRE-16707): Only tran supports psfxl format, result of other analyses will be in psfbin format.
+
+
+******************
+DC Analysis `dcOp'
+******************
+Important parameter values:
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    gmindc = 1 pS
+Convergence achieved in 2 iterations.
+Total time required for dc analysis `dcOp': CPU = 4 ms, elapsed = 4.23884 ms.
+Time accumulated: CPU = 177.972 ms, elapsed = 1.24574 s.
+Peak resident memory used = 35.4 Mbytes.
+
+dcOpInfo: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+Spectre received SIGTERM.
+
+Error found by spectre.
+    ERROR (SPECTRE-25): 
+        Killed by user.
+
+
+Aggregate audit (2:47:08 PM, Tue Aug 22, 2017):
+Time used: CPU = 215 ms, elapsed = 1.26 ks (21m  2.6s), util. = 17e-03%.
+Time spent in licensing: elapsed = 65.9 ms.
+Peak memory used = 35.6 Mbytes.
+Simulation started at: 2:26:06 PM, Tue Aug 22, 2017, ended at: 2:47:08 PM, Tue Aug 22, 2017, with elapsed time (wall clock): 1.26 ks (21m  2.6s).
+spectre completes with 1 error, 4 warnings, and 0 notices.
+spectre terminated prematurely due to fatal error.

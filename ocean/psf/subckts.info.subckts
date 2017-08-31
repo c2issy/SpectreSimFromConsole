@@ -1,0 +1,104 @@
+HEADER
+"PSFversion" "1.00"
+"simulator" "spectre"
+"version" "12.1.1.115.isr13"
+"date" "1:49:34 PM, Wed Aug 30, 2017"
+"design" "(no title)"
+"analysis type" "info.subckts"
+"analysis name" "subckts"
+"analysis description" "Circuit Information"
+"xVecSorted" "unknown"
+"tolerance.relative" 0.00100000
+TYPE
+"subckt" STRUCT(
+"subckt_params" STRING *
+"subckt_terminals" STRING *
+) PROP(
+"key" "sub"
+)
+VALUE
+"n_l34w500_33_rf" "subckt" (
+""
+""
+)
+"p_l18w500_18_rf" "subckt" (
+""
+""
+)
+"p_l34w500_33_rf" "subckt" (
+""
+""
+)
+"n_po7w500_18_rf" "subckt" (
+""
+""
+)
+"rnppo_mm" "subckt" (
+""
+""
+)
+"rnhr1000_mm" "subckt" (
+""
+""
+)
+"rnhr_rf" "subckt" (
+""
+""
+)
+"n_po7w500_33_rf" "subckt" (
+""
+""
+)
+"rnppo_rf" "subckt" (
+""
+""
+)
+"pad_rf" "subckt" (
+""
+""
+)
+"rnnpo_rf" "subckt" (
+""
+""
+)
+"mimcapm_rf" "subckt" (
+""
+""
+)
+"Cdiode" "subckt" (
+""
+"VD VF VLG VS VSG"
+)
+"rnnpo_mm" "subckt" (
+""
+""
+)
+"vardiop_rf" "subckt" (
+""
+""
+)
+"n_l18w500_18_rf" "subckt" (
+""
+""
+)
+"mimcaps_mm" "subckt" (
+"cmf ctc1 cvc1 w temper cm l"
+"n2 n1"
+)
+"p_po7w500_18_rf" "subckt" (
+""
+""
+)
+"varmis_18_rf" "subckt" (
+""
+""
+)
+"l_slcr20k_rf" "subckt" (
+""
+""
+)
+"p_po7w500_33_rf" "subckt" (
+""
+""
+)
+END

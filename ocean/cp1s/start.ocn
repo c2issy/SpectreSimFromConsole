@@ -1,0 +1,41 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; script to configure transient simulation of 1 stage tunable charge pump
+; Date of creation: 8/23/17
+; Date of last modification
+; author: Yingqiu Cao (cc)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;setting up the environment
+;specify circuit simulator
+simulator('spectre)
+;load the input netlist
+design("./ocean/cp1s/netlist")
+;set up directory to save simulation results
+outputDir="./ocean/cp1s/results"
+resultsDir(outputDir)
+;resultsDir("./ocean/cp1s/results")
+
+;assign parameter values
+;the peak voltage of the input ac signal, in Volt
+desVar("vinp" 0.3)
+
+;set initial value of the floating nodes
+ic("VF0" 0.3 "VF1" 0.3)
+
+;set up transient simulation
+;analysis('dc ?saveOppoint t ?oppoint "rawfile")
+analysis('tran ?stop 20n)
+
+;actually run the simulation
+run
+
+;selecting simulation result
+selectResults('tran)
+
+;saving result to file
+;ocnPrint( ?output "/work/yc923/oceab/cp1s/results/vout" ?numberNotation 'scientific v("VOUT"))
+;specify the location of the outputfile
+outFile=strcat(outputDir "/vout")
+;sample the output DC voltage
+outSig=sample(v("VOUT") 1n 20n "linear" 0.1n)
+ocnPrint( ?output outFile ?numberNotation 'scientific outSig)

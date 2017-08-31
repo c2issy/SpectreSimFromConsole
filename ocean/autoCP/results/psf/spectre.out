@@ -1,0 +1,260 @@
+
+Cadence (R) Virtuoso (R) Spectre (R) Circuit Simulator
+Version 12.1.1.115.isr13 32bit -- 27 Aug 2013
+Copyright (C) 1989-2013 Cadence Design Systems, Inc. All rights reserved worldwide. Cadence, Virtuoso and Spectre are registered trademarks of Cadence Design Systems, Inc. All others are the property of their respective holders.
+
+Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
+
+User: yc923   Host: bumba.ece.cornell.edu   HostID: FD800E80   PID: 27317
+Memory  available: 8.9906 GB  physical: 12.4791 GB
+CPU Type: Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz
+          Processor PhysicalID CoreID Frequency
+              0         0        0     1600.0
+              1         0        1     1600.0
+              2         0        2     1600.0
+              3         0        8     1600.0
+              4         0        9     1600.0
+              5         0        10     1600.0
+              6         1        0     1600.0
+              7         1        1     1600.0
+              8         1        2     1600.0
+              9         1        8     1600.0
+             10         1        9     1600.0
+             11         1        10     1600.0
+             12         0        0     1600.0
+             13         0        1     1600.0
+             14         0        2     1600.0
+             15         0        8     2267.0
+             16         0        9     1600.0
+             17         0        10     1600.0
+             18         1        0     1600.0
+             19         1        1     1600.0
+             20         1        2     1600.0
+             21         1        8     1600.0
+             22         1        9     1600.0
+             23         1        10     1600.0
+
+
+Simulating `input.scs' on bumba.ece.cornell.edu at 10:05:16 PM, Thur Aug 24, 2017 (process id: 27317).
+Current working directory: /work/yc923/ocean/cp1s
+Command line:
+    /opt/cadence/mmsim/tools/spectre/bin/32bit/spectre input.scs  \
+        +escchars +log results/psf/spectre.out +inter=mpsc  \
+        +mpssession=spectre0_27114_1 -raw results/psf +lqtimeout 900  \
+        -maxw 5 -maxn 5
+spectre pid = 27317
+
+Loading /opt/cadence/mmsim/tools.lnx86/cmi/lib/5.0/libinfineon_sh.so ...
+Loading /opt/cadence/mmsim/tools.lnx86/cmi/lib/5.0/libphilips_o_sh.so ...
+Loading /opt/cadence/mmsim/tools.lnx86/cmi/lib/5.0/libphilips_sh.so ...
+Loading /opt/cadence/mmsim/tools.lnx86/cmi/lib/5.0/libsparam_sh.so ...
+Loading /opt/cadence/mmsim/tools.lnx86/cmi/lib/5.0/libstmodels_sh.so ...
+Reading file:  /work/yc923/ocean/cp1s/input.scs
+Reading link:  /opt/cadence/mmsim
+Reading file:  /opt/cadence/MMSIM121/tools.lnx86/spectre/etc/configs/spectre.cfg
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_bjt_v121.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_bjt_v121.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_mimcap_v101.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_mimcap_v101.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_reg18bpw_v123.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_reg18bpw_v123.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_reg33bpw_v123.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_reg33bpw_v123.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_res_v141.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_res_v141.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_res_v141.va
+Reading link:  /opt/cadence/mmsim/tools.lnx86/spectre/etc/ahdl/constants.h
+Reading file:  /opt/cadence/MMSIM121/tools.lnx86/spectre/etc/ahdl/constants.vams
+Reading link:  /opt/cadence/mmsim/tools.lnx86/spectre/etc/ahdl/discipline.h
+Reading file:  /opt/cadence/MMSIM121/tools.lnx86/spectre/etc/ahdl/disciplines.vams
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_lvt18_v113.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_lvt33_v113.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_reg18_v124.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_reg18_v124.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_reg33_v114.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_reg33_v114.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_zvt18_v121.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_zvt18_v121.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_zvt33_v113.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/core_rf_v2d4.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/core_rf_v2d4.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/io_rf_v2d3.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/io_rf_v2d3.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/l_slcr20k_rf_v2d3.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/l_slcr20k_rf_v2d3.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mimcapm_rf_v2d3.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mimcapm_rf_v2d3.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mim.va
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/pad_rf_v2d3.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/pad_rf_v2d3.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/rnhr_rf_v2d4.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/rnhr_rf_v2d4.mdl.scs
+
+Warning from spectre in `rnhr_rf', during circuit read-in.
+    WARNING (SFE-2296): "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/./rnhr_rf_v2d4.mdl.scs" 8: The inline subckt definition `rnhr_rf' does not contain any inline components. The `inline' qualifier will therefore be ignored.
+
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/rnnpo_rf_v2d4.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/rnnpo_rf_v2d4.mdl.scs
+
+Warning from spectre in `rnnpo_rf', during circuit read-in.
+    WARNING (SFE-2296): "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/./rnnpo_rf_v2d4.mdl.scs" 8: The inline subckt definition `rnnpo_rf' does not contain any inline components. The `inline' qualifier will therefore be ignored.
+
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/rnppo_rf_v2d4.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/rnppo_rf_v2d4.mdl.scs
+
+Warning from spectre in `rnppo_rf', during circuit read-in.
+    WARNING (SFE-2296): "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/./rnppo_rf_v2d4.mdl.scs" 8: The inline subckt definition `rnppo_rf' does not contain any inline components. The `inline' qualifier will therefore be ignored.
+
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/vardiop_rf_v2d3.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/vardiop_rf_v2d3.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/varmis_18_rf_v2d3.lib.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/varmis_18_rf_v2d3.mdl.scs
+Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_diode_v113.mdl.scs
+
+Time for NDB Parsing: CPU = 137.978 ms, elapsed = 172.671 ms.
+Time accumulated: CPU = 137.978 ms, elapsed = 172.671 ms.
+Peak resident memory used = 30.3 Mbytes.
+
+
+Warning from spectre during hierarchy flattening.
+    WARNING (SFE-884): "input.scs" 57: The option 'reltol' will be deleted because it is redefined at 'input.scs':line '73'.
+    WARNING (SFE-884): "input.scs" 57: The option 'vabstol' will be deleted because it is redefined at 'input.scs':line '73'.
+    WARNING (SFE-884): "input.scs" 57: The option 'iabstol' will be deleted because it is redefined at 'input.scs':line '73'.
+    WARNING (SFE-884): "input.scs" 57: The option 'temp' will be deleted because it is redefined at 'input.scs':line '73'.
+    WARNING (SFE-884): "input.scs" 57: The option 'tnom' will be deleted because it is redefined at 'input.scs':line '73'.
+        Further occurrences of this warning will be suppressed.
+
+Existing shared object for module bsource_1 is up to date.
+Installed compiled interface for bsource_1.
+
+Warning from spectre in `Cdiode':`I6', during hierarchy flattening.
+    WARNING (SFE-30): "input.scs" 37: I6.M2: `nf' is not a valid parameter for an instance of `p_18_mm'.  Ignored.
+    WARNING (SFE-30): "input.scs" 37: I6.M2: `mis_flag' is not a valid parameter for an instance of `p_18_mm'.  Ignored.
+    WARNING (SFE-30): "input.scs" 37: I6.M2: `mf' is not a valid parameter for an instance of `p_18_mm'.  Ignored.
+    WARNING (SFE-30): "input.scs" 39: I6.M1: `nf' is not a valid parameter for an instance of `p_18_mm'.  Ignored.
+    WARNING (SFE-30): "input.scs" 39: I6.M1: `mis_flag' is not a valid parameter for an instance of `p_18_mm'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+Warning from spectre during hierarchy flattening.
+    WARNING (SFE-76): Duplicate initial condition specification, previous value (0.3) superceded by 0.3 for `VF1'.
+    WARNING (SFE-76): Duplicate initial condition specification, previous value (0.3) superceded by 0.3 for `VF0'.
+
+
+Time for Elaboration: CPU = 25.996 ms, elapsed = 27.1418 ms.
+Time accumulated: CPU = 164.974 ms, elapsed = 200.188 ms.
+Peak resident memory used = 33.3 Mbytes.
+
+
+Time for EDB Visiting: CPU = 0 s, elapsed = 746.012 us.
+Time accumulated: CPU = 164.974 ms, elapsed = 201.323 ms.
+Peak resident memory used = 33.8 Mbytes.
+
+
+Warning from spectre during initial setup.
+    WARNING (CMI-2426): I7.M0: `Cdscd' = -28.83e-06 is negative.
+    WARNING (CMI-2426): I7.M1: `Cdscd' = -28.83e-06 is negative.
+    WARNING (CMI-2426): I7.M2: `Cdscd' = -28.83e-06 is negative.
+    WARNING (CMI-2426): I7.M14: `Pdiblc2' = -14.7641e-03 is negative.
+    WARNING (CMI-2426): I7.M14: `Cdscd' = -500e-06 is negative.
+        Further occurrences of this warning will be suppressed.
+Notice from spectre during topology check.
+    No DC path from node `VLG<0>' to ground, Gmin installed to provide path.
+    No DC path from node `VSG<0>' to ground, Gmin installed to provide path.
+    No DC path from node `VF1' to ground, Gmin installed to provide path.
+    No DC path from node `VLG<1>' to ground, Gmin installed to provide path.
+    No DC path from node `VSG<1>' to ground, Gmin installed to provide path.
+        Further occurrences of this notice will be suppressed.
+
+
+Circuit inventory:
+              nodes 9
+            bsim3v3 8     
+          bsource_1 2     
+            vsource 1     
+
+
+Notice from spectre.
+    1 notice suppressed.
+    28 warnings suppressed.
+
+
+Time for parsing: CPU = 2 ms, elapsed = 3.34215 ms.
+Time accumulated: CPU = 167.974 ms, elapsed = 204.955 ms.
+Peak resident memory used = 34.5 Mbytes.
+
+Entering remote command mode using MPSC service (spectre, ipi, v0.0, spectre0_27114_1, ).
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 20 ns)
+************************************************
+
+Notice from spectre during IC analysis, during transient analysis `tran'.
+    There are 2 IC nodes defined.
+
+DC simulation time: CPU = 0 s, elapsed = 783.205 us.
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 20 ns
+    step = 20 ps
+    maxstep = 400 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+    tran: time = 520.8 ps     (2.6 %), step = 61.05 ps     (305 m%)
+    tran: time = 1.536 ns    (7.68 %), step = 57.06 ps     (285 m%)
+    tran: time = 2.504 ns    (12.5 %), step = 64.25 ps     (321 m%)
+    tran: time = 3.526 ns    (17.6 %), step = 60.48 ps     (302 m%)
+    tran: time = 4.548 ns    (22.7 %), step = 55.21 ps     (276 m%)
+    tran: time = 5.518 ns    (27.6 %), step = 62.15 ps     (311 m%)
+    tran: time = 6.539 ns    (32.7 %), step = 57.07 ps     (285 m%)
+    tran: time = 7.515 ns    (37.6 %), step = 62.97 ps     (315 m%)
+    tran: time = 8.538 ns    (42.7 %), step = 57.49 ps     (287 m%)
+    tran: time = 9.518 ns    (47.6 %), step = 62.58 ps     (313 m%)
+    tran: time = 10.54 ns    (52.7 %), step = 56.45 ps     (282 m%)
+    tran: time = 11.52 ns    (57.6 %), step = 61.59 ps     (308 m%)
+    tran: time = 12.5 ns     (62.5 %), step = 66.49 ps     (332 m%)
+    tran: time = 13.53 ns    (67.7 %), step = 59.39 ps     (297 m%)
+    tran: time = 14.52 ns    (72.6 %), step = 62.2 ps      (311 m%)
+    tran: time = 15.5 ns     (77.5 %), step = 66.87 ps     (334 m%)
+    tran: time = 16.54 ns    (82.7 %), step = 59.13 ps     (296 m%)
+    tran: time = 17.53 ns    (87.6 %), step = 61.58 ps     (308 m%)
+    tran: time = 18.52 ns    (92.6 %), step = 63.93 ps     (320 m%)
+    tran: time = 19.55 ns    (97.7 %), step = 56.07 ps     (280 m%)
+Number of accepted tran steps =             334
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 0 s, elapsed = 863.075 us.
+Intrinsic tran analysis time:    CPU = 38.994 ms, elapsed = 40.498 ms.
+Total time required for tran analysis `tran': CPU = 40.994 ms, elapsed = 42.9969 ms.
+Time accumulated: CPU = 211.967 ms, elapsed = 1.28583 s.
+Peak resident memory used = 35.9 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+Spectre received SIGTERM.
+
+Error found by spectre.
+    ERROR (SPECTRE-25): 
+        Killed by user.

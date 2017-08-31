@@ -1,0 +1,49 @@
+// Generated for: spectre
+// Generated on: Aug 21 21:51:21 2017
+// Design library name: newUMC18
+// Design cell name: resDivier
+// Design view name: schematic
+simulator lang=spectre
+global 0
+parameters //r0 vd
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_bjt_v121.lib.scs" section=tt_bip
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_mimcap_v101.lib.scs" section=mimcaps_typ
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_reg18bpw_v123.lib.scs" section=tt
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_reg33bpw_v123.lib.scs" section=tt
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_res_v141.lib.scs" section=res_typ
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_lvt18_v113.lib.scs" section=tt
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_lvt33_v113.lib.scs" section=tt
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_reg18_v124.lib.scs" section=tt
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_reg33_v114.lib.scs" section=tt
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_zvt18_v121.lib.scs" section=tt
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_zvt33_v113.lib.scs" section=tt
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/core_rf_v2d4.lib.scs" section=tt
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/io_rf_v2d3.lib.scs" section=tt
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/l_slcr20k_rf_v2d3.lib.scs" section=typ
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mimcapm_rf_v2d3.lib.scs" section=typ
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/pad_rf_v2d3.lib.scs" section=typ
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/rnhr_rf_v2d4.lib.scs" section=typ
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/rnnpo_rf_v2d4.lib.scs" section=typ
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/rnppo_rf_v2d4.lib.scs" section=typ
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/vardiop_rf_v2d3.lib.scs" section=typ
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/varmis_18_rf_v2d3.lib.scs" section=typ
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_diode_v113.mdl.scs"
+
+// Library name: newUMC18
+// Cell name: resDivier
+// View name: schematic
+R1 (vout 0) resistor r=1K
+R0 (vin vout) resistor r=r0
+V0 (vin 0) vsource dc=vd type=dc
+
+//simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
+//    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
+//    digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \
+//    checklimitdest=psf 
+//modelParameter info what=models where=rawfile
+//element info what=inst where=rawfile
+//outputParameter info what=output where=rawfile
+//designParamVals info what=parameters where=rawfile
+//primitives info what=primitives where=rawfile
+//subckts info what=subckts  where=rawfile
+//saveOptions options save=allpub

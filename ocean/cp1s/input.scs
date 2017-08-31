@@ -1,0 +1,86 @@
+parameters vinp=0.3
+// Generated for: spectre
+// Generated on: Aug 22 21:26:48 2017
+// Design library name: newUMC18
+// Design cell name: ChargePump
+// Design view name: schematic
+simulator lang=spectre
+global 0
+parameters //vinp
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_bjt_v121.lib.scs" section=tt_bip
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_mimcap_v101.lib.scs" section=mimcaps_typ
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_reg18bpw_v123.lib.scs" section=tt
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_reg33bpw_v123.lib.scs" section=tt
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_res_v141.lib.scs" section=res_typ
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_lvt18_v113.lib.scs" section=tt
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_lvt33_v113.lib.scs" section=tt
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_reg18_v124.lib.scs" section=tt
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_reg33_v114.lib.scs" section=tt
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_zvt18_v121.lib.scs" section=tt
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_zvt33_v113.lib.scs" section=tt
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/core_rf_v2d4.lib.scs" section=tt
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/io_rf_v2d3.lib.scs" section=tt
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/l_slcr20k_rf_v2d3.lib.scs" section=typ
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mimcapm_rf_v2d3.lib.scs" section=typ
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/pad_rf_v2d3.lib.scs" section=typ
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/rnhr_rf_v2d4.lib.scs" section=typ
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/rnnpo_rf_v2d4.lib.scs" section=typ
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/rnppo_rf_v2d4.lib.scs" section=typ
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/vardiop_rf_v2d3.lib.scs" section=typ
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/varmis_18_rf_v2d3.lib.scs" section=typ
+include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_diode_v113.mdl.scs"
+
+// Library name: myUMC18
+// Cell name: Cdiode
+// View name: schematic
+subckt Cdiode VD VF VLG VS VSG
+    M2 (VSG VF VSG VSG) p_18_mm w=8.8u l=4.4u nf=1 mis_flag=1 ad=4.312e-12 \
+        as=4.312e-12 pd=18.58u ps=18.58u m=(1)*(1) mf=(1)*(1)
+    M1 (VLG VF VLG VLG) p_18_mm w=20u l=25.0u nf=1 mis_flag=1 ad=9.8e-12 \
+        as=9.8e-12 pd=40.98u ps=40.98u m=(1)*(1) mf=(1)*(1)
+    M0 (VD VF VD VD) p_18_mm w=12.5u l=8u nf=1 mis_flag=1 ad=6.125e-12 \
+        as=6.125e-12 pd=25.98u ps=25.98u m=(1)*(1) mf=(1)*(1)
+    M14 (VD VF VS VD) n_bpw_18_mm w=3u l=360.0n ad=1.03e-12 as=1.03e-12 \
+        pd=4.686667u ps=4.686667u m=(3)*(1)
+ends Cdiode
+// End of subcircuit definition.
+
+// Library name: newUMC18
+// Cell name: ChargePump
+// View name: schematic
+C0 (0 VOUT) mimcaps_mm w=45.0u l=45.0u m=1
+C1 (VIN\+ VM) mimcaps_mm w=45.0u l=45.0u m=1
+V0 (VIN\+ 0) vsource type=sine ampl=vinp freq=1G
+I6 (VM VF1 VLG\<1\> VOUT VSG\<1\>) Cdiode
+I7 (0 VF0 VLG\<0\> VM VSG\<0\>) Cdiode
+ic VF0=0.3 VF1=0.3 
+simulatorOptions options reltol=1e-3 vabstol=1e-5 iabstol=1e-11 temp=27 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \
+    checklimitdest=psf 
+//tran tran stop=20n errpreset=conservative write="spectre.ic" \
+//    writefinal="spectre.fc" annotate=status maxiters=5 
+//finalTimeOP info what=oppoint where=rawfile
+//modelParameter info what=models where=rawfile
+//element info what=inst where=rawfile
+//outputParameter info what=output where=rawfile
+//designParamVals info what=parameters where=rawfile
+//primitives info what=primitives where=rawfile
+//subckts info what=subckts  where=rawfile
+//save VIN\+ VM VOUT 
+//saveOptions options save=allpub
+ic VF1=0.3 VF0=0.3 
+simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="results/psf/sens.output" \
+    checklimitdest=psf 
+tran tran stop=2e-08 write="spectre.ic" writefinal="spectre.fc" \
+    annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts  where=rawfile
+saveOptions options save=allpub
