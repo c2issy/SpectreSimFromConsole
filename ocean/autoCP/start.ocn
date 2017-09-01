@@ -10,14 +10,31 @@ resultDir(ourputDir)
 
 ;assign parameter values
 ;the peak voltage of the input ac signal, in Volt
-desVar("vinp" 0.300)
+desVar("vinp" 0.150)
 ;set initial value of the floating nodes
-ic("VF0" 0.300 "VF1" 0.300)
+ic("VF0" 0.400)
+ic("VF1" 0.400)
+ic("VF2" 0.400)
+ic("VF3" 0.400)
+ic("VF4" 0.400)
+ic("VF5" 0.400)
+ic("VF6" 0.400)
+ic("VF7" 0.400)
+ic("VF8" 0.400)
+ic("VF9" 0.400)
+ic("VF10" 0.400)
+ic("VF11" 0.400)
+ic("VF12" 0.400)
+ic("VF13" 0.400)
+ic("VF14" 0.400)
+ic("VF15" 0.400)
 
 ;set up transient simulation
 ;analysis('dc ?saveOppoint t ?oppoint "rawfile")
-analysis('tran ?stop 10n)
-
+analysis('tran ?stop 5000n ?errpreset "moderate")
+set up save options
+delete('save)
+save( 'v "VOUT")
 ;actually run the simulation
 run
 
@@ -26,5 +43,5 @@ selectResults('tran)
 ;saving result to file
 ;specify the location of the outputfile
 ;sample the output transient waveform
-outSig=sample(v("VOUT") 0 10n "linear" 0.1n)
+outSig=sample(v("VOUT") 4990n 5000n "linear" 0.1n)
 ocnPrint( ?output "/work/yc923/ocean/autoCP/results/vout" ?numberNotation 'scientific outSig))

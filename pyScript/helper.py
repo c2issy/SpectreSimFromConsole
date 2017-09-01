@@ -4,6 +4,8 @@
 #Author: Yingqiu Cao (CC)
 #Modification log
 ########################################
+import os
+
 
 #read n lines from the last of the file
 #extract the 2nd colume of data (V data)
@@ -36,3 +38,18 @@ def readFromTail(file,nlines):
 		average+=this_voltage
 
 	return average/nlines
+
+
+
+#check if the resultFile exist
+#if so, clear it's previous contents
+#if not, create the file
+def openNewFile(resultFile):
+	if not os.path.exists(resultFile):
+		os.mknod(resultFile)
+	#clear the outputfile
+	else:
+		f=open(resultFile,'w')
+		f.close()
+
+

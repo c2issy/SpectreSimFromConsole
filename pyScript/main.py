@@ -6,6 +6,7 @@
 #Modification log
 ###############################################
 import os
+import helper
 
 #####################################################################
 #input arguments that should be loaded to the writeOcn.py file 
@@ -15,25 +16,34 @@ seperator="/"
 oceanFileName="start.ocn"
 
 #initialize the parameters used in simulation
-vinp=0.3 #peak voltage of the input ac signal
-VF=[0.30,0.30]  #initial voltage of the floating gates of the diodes
-stopTime=10 #stop time of the transient simulation, in ns
+vinp=0.15 #peak voltage of the input ac signal
+VF=[0.6,0.6,0.6,0.6,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4]  #initial voltage of the floating gates of the diodes
+stopTime=5000 #stop time of the transient simulation, in ns
+startTime=stopTime-10  #start time to save the output transient signal
 stepSize=0.1 #step size to sample the output waveform, in ns. By default, the operating freq is 1G Hz, a stepSize of 0.1 ns gives 10 data points per cycle
 ################################################
 
 
-###########################################
-#run cadence spectre simulation
-########################################
-#generator "start.ocn" file
-import writeOcn
-writeOcn.generateOcn(rundir,seperator,oceanFileName,vinp,VF,stopTime,stepSize) 
-#save the current directory so that we can change back to it after simulation
-curDir=os.getcwd()
-os.chdir('/work/yc923/Cadence')  #change to a directory that has cds.lib and other start up files
-#the ocean command line to run spectre simulation
-cmd = 'virtuoso -nograph -replay "{0}/{1}"'.format(rundir,oceanFileName)
-#calling cadence
-os.system( cmd )
-#change the directory back
-os.chdir(curDir)
+################################################
+#
+from bs import linearSearch
+search=linearSearch(vinp,startTime,stopTime,stepSize,rundir,seperator,oceanFileName)
+
+#vout=search.runSim(VF)
+#print(vout)
+
+#VOUT=search.runSim(list(VF))
+#print(VOUT)
+
+deltaV_low=0.2
+deltaV_high=0.2
+init_grid=0.1
+stop_grid=0.02 #20mV
+startStage=0
+count=4
+
+
+result=search.searchVF(VF,startStage,count,deltaV_low,deltaV_high,init_grid,stop_grid,rundir)
+
+print("optiVF:",result[0],"maxVout:",result[1])
+

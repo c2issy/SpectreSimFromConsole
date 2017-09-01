@@ -5,14 +5,14 @@ Copyright (C) 1989-2013 Cadence Design Systems, Inc. All rights reserved worldwi
 
 Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
 
-User: yc923   Host: bumba.ece.cornell.edu   HostID: FD800E80   PID: 30644
-Memory  available: 8.8875 GB  physical: 12.4791 GB
+User: yc923   Host: bumba.ece.cornell.edu   HostID: FD800E80   PID: 26022
+Memory  available: 8.5916 GB  physical: 12.4791 GB
 CPU Type: Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz
           Processor PhysicalID CoreID Frequency
-              0         0        0     1600.0
+              0         0        0     2267.0
               1         0        1     1600.0
-              2         0        2     1600.0
-              3         0        8     1600.0
+              2         0        2     2668.0
+              3         0        8     2668.0
               4         0        9     1600.0
               5         0        10     1600.0
               6         1        0     1600.0
@@ -24,7 +24,7 @@ CPU Type: Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz
              12         0        0     1600.0
              13         0        1     1600.0
              14         0        2     1600.0
-             15         0        8     2000.0
+             15         0        8     1600.0
              16         0        9     1600.0
              17         0        10     1600.0
              18         1        0     1600.0
@@ -35,14 +35,14 @@ CPU Type: Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz
              23         1        10     1600.0
 
 
-Simulating `input.scs' on bumba.ece.cornell.edu at 1:49:34 PM, Wed Aug 30, 2017 (process id: 30644).
+Simulating `input.scs' on bumba.ece.cornell.edu at 6:51:30 PM, Fri Sep 1, 2017 (process id: 26022).
 Current working directory: /work/yc923/ocean/autoCP
 Command line:
     /opt/cadence/mmsim/tools/spectre/bin/32bit/spectre input.scs  \
         +escchars +log ../psf/spectre.out +inter=mpsc  \
-        +mpssession=spectre0_30247_1 -raw ../psf +lqtimeout 900 -maxw 5  \
+        +mpssession=spectre0_25635_1 -raw ../psf +lqtimeout 900 -maxw 5  \
         -maxn 5
-spectre pid = 30644
+spectre pid = 26022
 
 Loading /opt/cadence/mmsim/tools.lnx86/cmi/lib/5.0/libinfineon_sh.so ...
 Loading /opt/cadence/mmsim/tools.lnx86/cmi/lib/5.0/libphilips_o_sh.so ...
@@ -111,92 +111,96 @@ Reading file:  /research/KAN/UM18/oa/Models/Spectre/varmis_18_rf_v2d3.lib.scs
 Reading file:  /research/KAN/UM18/oa/Models/Spectre/varmis_18_rf_v2d3.mdl.scs
 Reading file:  /research/KAN/UM18/oa/Models/Spectre/mm180_diode_v113.mdl.scs
 
-Time for NDB Parsing: CPU = 142.977 ms, elapsed = 175.52 ms.
-Time accumulated: CPU = 142.977 ms, elapsed = 175.52 ms.
+Time for NDB Parsing: CPU = 133.978 ms, elapsed = 166.725 ms.
+Time accumulated: CPU = 133.978 ms, elapsed = 166.725 ms.
 Peak resident memory used = 30.3 Mbytes.
 
 
 Warning from spectre during hierarchy flattening.
-    WARNING (SFE-884): "input.scs" 57: The option 'reltol' will be deleted because it is redefined at 'input.scs':line '73'.
-    WARNING (SFE-884): "input.scs" 57: The option 'vabstol' will be deleted because it is redefined at 'input.scs':line '73'.
-    WARNING (SFE-884): "input.scs" 57: The option 'iabstol' will be deleted because it is redefined at 'input.scs':line '73'.
-    WARNING (SFE-884): "input.scs" 57: The option 'temp' will be deleted because it is redefined at 'input.scs':line '73'.
-    WARNING (SFE-884): "input.scs" 57: The option 'tnom' will be deleted because it is redefined at 'input.scs':line '73'.
+    WARNING (SFE-884): "input.scs" 107: The option 'reltol' will be deleted because it is redefined at 'input.scs':line '124'.
+    WARNING (SFE-884): "input.scs" 107: The option 'vabstol' will be deleted because it is redefined at 'input.scs':line '124'.
+    WARNING (SFE-884): "input.scs" 107: The option 'iabstol' will be deleted because it is redefined at 'input.scs':line '124'.
+    WARNING (SFE-884): "input.scs" 107: The option 'temp' will be deleted because it is redefined at 'input.scs':line '124'.
+    WARNING (SFE-884): "input.scs" 107: The option 'tnom' will be deleted because it is redefined at 'input.scs':line '124'.
         Further occurrences of this warning will be suppressed.
 
 Existing shared object for module bsource_1 is up to date.
 Installed compiled interface for bsource_1.
 
-Warning from spectre in `Cdiode':`I6', during hierarchy flattening.
-    WARNING (SFE-30): "input.scs" 37: I6.M2: `nf' is not a valid parameter for an instance of `p_18_mm'.  Ignored.
-    WARNING (SFE-30): "input.scs" 37: I6.M2: `mis_flag' is not a valid parameter for an instance of `p_18_mm'.  Ignored.
-    WARNING (SFE-30): "input.scs" 37: I6.M2: `mf' is not a valid parameter for an instance of `p_18_mm'.  Ignored.
-    WARNING (SFE-30): "input.scs" 39: I6.M1: `nf' is not a valid parameter for an instance of `p_18_mm'.  Ignored.
-    WARNING (SFE-30): "input.scs" 39: I6.M1: `mis_flag' is not a valid parameter for an instance of `p_18_mm'.  Ignored.
+Warning from spectre in `Cdiode':`I1.I1.I1.I7', in `CP_1s_cdiode':`I1.I1.I1', in `CP_2s_cdiode':`I1.I1', in `CP_4s_cdiode':`I1', during hierarchy flattening.
+    WARNING (SFE-30): "input.scs" 37: I1.I1.I1.I7.M2: `nf' is not a valid parameter for an instance of `p_18_mm'.  Ignored.
+    WARNING (SFE-30): "input.scs" 37: I1.I1.I1.I7.M2: `mis_flag' is not a valid parameter for an instance of `p_18_mm'.  Ignored.
+    WARNING (SFE-30): "input.scs" 37: I1.I1.I1.I7.M2: `mf' is not a valid parameter for an instance of `p_18_mm'.  Ignored.
+    WARNING (SFE-30): "input.scs" 39: I1.I1.I1.I7.M1: `nf' is not a valid parameter for an instance of `p_18_mm'.  Ignored.
+    WARNING (SFE-30): "input.scs" 39: I1.I1.I1.I7.M1: `mis_flag' is not a valid parameter for an instance of `p_18_mm'.  Ignored.
         Further occurrences of this warning will be suppressed.
 Warning from spectre during hierarchy flattening.
-    WARNING (SFE-76): Duplicate initial condition specification, previous value (0.3) superceded by 0.3 for `VF1'.
-    WARNING (SFE-76): Duplicate initial condition specification, previous value (0.3) superceded by 0.3 for `VF0'.
+    WARNING (SFE-76): Duplicate initial condition specification, previous value (0.4) superceded by 0.4 for `VF15'.
+    WARNING (SFE-76): Duplicate initial condition specification, previous value (0.4) superceded by 0.4 for `VF14'.
+    WARNING (SFE-76): Duplicate initial condition specification, previous value (0.4) superceded by 0.4 for `VF13'.
+    WARNING (SFE-76): Duplicate initial condition specification, previous value (0.4) superceded by 0.4 for `VF12'.
+    WARNING (SFE-76): Duplicate initial condition specification, previous value (0.4) superceded by 0.4 for `VF11'.
+        Further occurrences of this warning will be suppressed.
 
 
-Time for Elaboration: CPU = 26.996 ms, elapsed = 27.3521 ms.
-Time accumulated: CPU = 169.973 ms, elapsed = 203.042 ms.
-Peak resident memory used = 33.3 Mbytes.
+Time for Elaboration: CPU = 27.996 ms, elapsed = 29.8259 ms.
+Time accumulated: CPU = 162.974 ms, elapsed = 196.724 ms.
+Peak resident memory used = 33.5 Mbytes.
 
 
-Time for EDB Visiting: CPU = 1 ms, elapsed = 778.198 us.
-Time accumulated: CPU = 170.973 ms, elapsed = 203.982 ms.
-Peak resident memory used = 33.8 Mbytes.
+Time for EDB Visiting: CPU = 2 ms, elapsed = 2.11596 ms.
+Time accumulated: CPU = 165.974 ms, elapsed = 198.996 ms.
+Peak resident memory used = 34 Mbytes.
 
 
 Warning from spectre during initial setup.
-    WARNING (CMI-2426): I7.M0: `Cdscd' = -28.83e-06 is negative.
-    WARNING (CMI-2426): I7.M1: `Cdscd' = -28.83e-06 is negative.
-    WARNING (CMI-2426): I7.M2: `Cdscd' = -28.83e-06 is negative.
-    WARNING (CMI-2426): I7.M14: `Pdiblc2' = -14.7641e-03 is negative.
-    WARNING (CMI-2426): I7.M14: `Cdscd' = -500e-06 is negative.
+    WARNING (CMI-2426): I0.I0.I0.I6.M0: `Cdscd' = -28.83e-06 is negative.
+    WARNING (CMI-2426): I0.I0.I0.I6.M1: `Cdscd' = -28.83e-06 is negative.
+    WARNING (CMI-2426): I0.I0.I0.I6.M2: `Cdscd' = -28.83e-06 is negative.
+    WARNING (CMI-2426): I0.I0.I0.I6.M14: `Pdiblc2' = -14.7641e-03 is negative.
+    WARNING (CMI-2426): I0.I0.I0.I6.M14: `Cdscd' = -500e-06 is negative.
         Further occurrences of this warning will be suppressed.
 Notice from spectre during topology check.
-    No DC path from node `VLG<0>' to ground, Gmin installed to provide path.
-    No DC path from node `VSG<0>' to ground, Gmin installed to provide path.
-    No DC path from node `VF1' to ground, Gmin installed to provide path.
-    No DC path from node `VLG<1>' to ground, Gmin installed to provide path.
-    No DC path from node `VSG<1>' to ground, Gmin installed to provide path.
+    No DC path from node `VF8' to ground, Gmin installed to provide path.
+    No DC path from node `VF9' to ground, Gmin installed to provide path.
+    No DC path from node `net22<1>' to ground, Gmin installed to provide path.
+    No DC path from node `VF10' to ground, Gmin installed to provide path.
+    No DC path from node `net23<1>' to ground, Gmin installed to provide path.
         Further occurrences of this notice will be suppressed.
 
 
 Circuit inventory:
-              nodes 9
-            bsim3v3 8     
-          bsource_1 2     
+              nodes 65
+            bsim3v3 64    
+          bsource_1 16    
             vsource 1     
 
 
 Notice from spectre.
-    1 notice suppressed.
-    28 warnings suppressed.
+    43 notices suppressed.
+    165 warnings suppressed.
 
 
-Time for parsing: CPU = 2 ms, elapsed = 2.51722 ms.
-Time accumulated: CPU = 172.973 ms, elapsed = 206.648 ms.
-Peak resident memory used = 34.5 Mbytes.
+Time for parsing: CPU = 3 ms, elapsed = 3.69477 ms.
+Time accumulated: CPU = 168.974 ms, elapsed = 202.834 ms.
+Peak resident memory used = 34.9 Mbytes.
 
-Entering remote command mode using MPSC service (spectre, ipi, v0.0, spectre0_30247_1, ).
+Entering remote command mode using MPSC service (spectre, ipi, v0.0, spectre0_25635_1, ).
 
-************************************************
-Transient Analysis `tran': time = (0 s -> 10 ns)
-************************************************
+***********************************************
+Transient Analysis `tran': time = (0 s -> 5 us)
+***********************************************
 
 Notice from spectre during IC analysis, during transient analysis `tran'.
-    There are 2 IC nodes defined.
+    There are 16 IC nodes defined.
 
-DC simulation time: CPU = 1 ms, elapsed = 871.897 us.
+DC simulation time: CPU = 4.999 ms, elapsed = 5.53179 ms.
 Important parameter values:
     start = 0 s
     outputstart = 0 s
-    stop = 10 ns
-    step = 10 ps
-    maxstep = 200 ps
+    stop = 5 us
+    step = 5 ns
+    maxstep = 100 ns
     ic = all
     useprevic = no
     skipdc = no
@@ -214,37 +218,40 @@ Important parameter values:
     gmin = 1 pS
 
 
-    tran: time = 256 ps      (2.56 %), step = 54.68 ps     (547 m%)
-    tran: time = 795 ps      (7.95 %), step = 60.59 ps     (606 m%)
-    tran: time = 1.273 ns    (12.7 %), step = 57.42 ps     (574 m%)
-    tran: time = 1.75 ns     (17.5 %), step = 54.51 ps     (545 m%)
-    tran: time = 2.288 ns    (22.9 %), step = 59.53 ps     (595 m%)
-    tran: time = 2.766 ns    (27.7 %), step = 56.43 ps     (564 m%)
-    tran: time = 3.302 ns      (33 %), step = 62.11 ps     (621 m%)
-    tran: time = 3.788 ns    (37.9 %), step = 59.52 ps     (595 m%)
-    tran: time = 4.27 ns     (42.7 %), step = 57.16 ps     (572 m%)
-    tran: time = 4.811 ns    (48.1 %), step = 63.84 ps     (638 m%)
-    tran: time = 5.289 ns    (52.9 %), step = 59.93 ps     (599 m%)
-    tran: time = 5.769 ns    (57.7 %), step = 57.11 ps     (571 m%)
-    tran: time = 6.313 ns    (63.1 %), step = 64.32 ps     (643 m%)
-    tran: time = 6.795 ns    (67.9 %), step = 60.89 ps     (609 m%)
-    tran: time = 7.278 ns    (72.8 %), step = 58.53 ps     (585 m%)
-    tran: time = 7.761 ns    (77.6 %), step = 56.14 ps     (561 m%)
-    tran: time = 8.304 ns      (83 %), step = 62.68 ps     (627 m%)
-    tran: time = 8.781 ns    (87.8 %), step = 58.99 ps     (590 m%)
-    tran: time = 9.266 ns    (92.7 %), step = 56.84 ps     (568 m%)
-    tran: time = 9.813 ns    (98.1 %), step = 64.39 ps     (644 m%)
-Number of accepted tran steps =             172
+Output and IC/nodeset summary:
+               save 1     
+
+    tran: time = 125 ns       (2.5 %), step = 83.33 ps    (1.67 m%)
+    tran: time = 375 ns       (7.5 %), step = 83.33 ps    (1.67 m%)
+    tran: time = 625 ns      (12.5 %), step = 83.33 ps    (1.67 m%)
+    tran: time = 875.1 ns    (17.5 %), step = 83.33 ps    (1.67 m%)
+    tran: time = 1.125 us    (22.5 %), step = 83.33 ps    (1.67 m%)
+    tran: time = 1.375 us    (27.5 %), step = 83.33 ps    (1.67 m%)
+    tran: time = 1.625 us    (32.5 %), step = 83.33 ps    (1.67 m%)
+    tran: time = 1.875 us    (37.5 %), step = 83.33 ps    (1.67 m%)
+    tran: time = 2.125 us    (42.5 %), step = 83.33 ps    (1.67 m%)
+    tran: time = 2.375 us    (47.5 %), step = 83.33 ps    (1.67 m%)
+    tran: time = 2.625 us    (52.5 %), step = 83.33 ps    (1.67 m%)
+    tran: time = 2.875 us    (57.5 %), step = 83.33 ps    (1.67 m%)
+    tran: time = 3.125 us    (62.5 %), step = 83.33 ps    (1.67 m%)
+    tran: time = 3.375 us    (67.5 %), step = 83.33 ps    (1.67 m%)
+    tran: time = 3.625 us    (72.5 %), step = 83.33 ps    (1.67 m%)
+    tran: time = 3.875 us    (77.5 %), step = 83.33 ps    (1.67 m%)
+    tran: time = 4.125 us    (82.5 %), step = 83.33 ps    (1.67 m%)
+    tran: time = 4.375 us    (87.5 %), step = 83.33 ps    (1.67 m%)
+    tran: time = 4.625 us    (92.5 %), step = 83.33 ps    (1.67 m%)
+    tran: time = 4.875 us    (97.5 %), step = 83.33 ps    (1.67 m%)
+Number of accepted tran steps =             66543
 
 Notice from spectre during transient analysis `tran'.
     Trapezoidal ringing is detected during tran analysis.
         Please use method=trap for better results and performance.
 
-Initial condition solution time: CPU = 1 ms, elapsed = 983.953 us.
-Intrinsic tran analysis time:    CPU = 24.997 ms, elapsed = 26.3941 ms.
-Total time required for tran analysis `tran': CPU = 27.996 ms, elapsed = 29.4869 ms.
-Time accumulated: CPU = 203.968 ms, elapsed = 1.27503 s.
-Peak resident memory used = 35.9 Mbytes.
+Initial condition solution time: CPU = 4.999 ms, elapsed = 5.64718 ms.
+Intrinsic tran analysis time:    CPU = 37.8732 s, elapsed = 37.8952 s.
+Total time required for tran analysis `tran': CPU = 37.8802 s, elapsed = 37.9032 s.
+Time accumulated: CPU = 38.0522 s, elapsed = 39.1448 s.
+Peak resident memory used = 36.4 Mbytes.
 
 finalTimeOP: writing operating point information to rawfile.
 modelParameter: writing model parameter values to rawfile.

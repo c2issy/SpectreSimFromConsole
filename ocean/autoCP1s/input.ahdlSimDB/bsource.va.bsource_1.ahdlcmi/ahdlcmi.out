@@ -1,0 +1,64 @@
+ahdlcmicompile: Compiling ahdlcmi in input.ahdlSimDB//bsource.va.bsource_1.ahdlcmi/Linux/ for Linux with optimize using gcc on Wed Aug 23 13:05:24 EDT 2017 [5.0]
+ahdlcmicompile: Generating makefile
+PATH:  /opt/cadence/mmsim/tools.lnx86/cdsgcc/gcc/4.1/install/bin:/opt/cadence/mmsim/bin:/opt/cadence/mmsim/tools/bin:/opt/cadence/ic/bin:/opt/cadence/ic/tools/bin:/opt/cadence/ic/tools.lnx86/bin:/opt/cadence/ic/share/oa/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:.:/home/yc923/bin/x86_64-linux:/usr/local/bin:/usr/bin/X11:/usr/ucb:/usr/bin:/bin:/opt/gnu/bin:/usr/openwin/bin:/opt/matlab/bin:/opt/cadence/mmsim/tools/spectre:/opt/cadence/ic/tools.lnx86/dfII/bin:/home/yc923/tkdiff-4.1.4-unix:/usr/ccs/bin:/opt/silvaco/bin
+LD_LIBRARY_PATH:  /opt/cadence/mmsim/tools.lnx86/cdsgcc/gcc/4.1/install/lib:/opt/cadence/mmsim/tools/giganta/lib:/opt/cadence/mmsim/tools/mdl/lib:/opt/cadence/mmsim/tools/mmsim/lib:/opt/cadence/mmsim/tools/inca/lib:/opt/cadence/mmsim/tools/spectre/lib:/opt/cadence/mmsim/tools/dfII/lib:/opt/cadence/mmsim/tools/lib:/opt/cadence/ic/tools/lib:/opt/cadence/ic/share/oa/lib/linux_rhel40_gcc44x_32/opt:/opt/cadence/ic/tools.lnx86/Qt/32bit/lib:/opt/cadence/ic/tools.lnx86/dfII/lib:/opt/cadence/ic/tools.lnx86/sev/lib:/opt/cadence/ic/tools.lnx86/lib:/opt/cadence/ic/tools.lnx86/inca/lib:/usr/dt/lib:/usr/openwin/lib:/usr/lib/X11:/usr/local/lib:/opt/sfw/lib
+/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/bin/gnumake -j25 -f GNUmakefile
+Compiling C file bsource_1_func.c (optimize) with -O0
+/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/bin/ahdlcc 0 /opt/cadence/mmsim/tools.lnx86/cdsgcc/gcc/4.4/bin/gcc  -march=i686 -m32 -ffast-math -O0 -DSYSV -DSVR4 -D_REENTRANT -fPIC   -DconfigSPECTRE -I. -I/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/include -c bsource_1_func.c -o obj/optimize/5.0/bsource_1_func.o || rm -f -f obj/optimize/5.0/bsource_1_func.o
+Compiling C file bsource_1_DcFuncDerLoad.c (optimize)
+/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/bin/ahdlcc 0 /opt/cadence/mmsim/tools.lnx86/cdsgcc/gcc/4.4/bin/gcc  -march=i686 -m32 -ffast-math -O3 -DSYSV -DSVR4 -D_REENTRANT -fPIC   -DconfigSPECTRE -I. -I/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/include -c bsource_1_DcFuncDerLoad.c -o obj/optimize/5.0/bsource_1_DcFuncDerLoad.o || rm -f -f obj/optimize/5.0/bsource_1_DcFuncDerLoad.o
+Compiling C file bsource_1_DcFuncLoad.c (optimize)
+/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/bin/ahdlcc 0 /opt/cadence/mmsim/tools.lnx86/cdsgcc/gcc/4.4/bin/gcc  -march=i686 -m32 -ffast-math -O3 -DSYSV -DSVR4 -D_REENTRANT -fPIC   -DconfigSPECTRE -I. -I/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/include -c bsource_1_DcFuncLoad.c -o obj/optimize/5.0/bsource_1_DcFuncLoad.o || rm -f -f obj/optimize/5.0/bsource_1_DcFuncLoad.o
+Compiling C file bsource_1_TranFuncDerLoad.c (optimize)
+/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/bin/ahdlcc 0 /opt/cadence/mmsim/tools.lnx86/cdsgcc/gcc/4.4/bin/gcc  -march=i686 -m32 -ffast-math -O3 -DSYSV -DSVR4 -D_REENTRANT -fPIC   -DconfigSPECTRE -I. -I/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/include -c bsource_1_TranFuncDerLoad.c -o obj/optimize/5.0/bsource_1_TranFuncDerLoad.o || rm -f -f obj/optimize/5.0/bsource_1_TranFuncDerLoad.o
+Compiling C file bsource_1_TranFuncLoad.c (optimize)
+Compiling C file bsource_1_HbFuncLoad.c (optimize)
+/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/bin/ahdlcc 0 /opt/cadence/mmsim/tools.lnx86/cdsgcc/gcc/4.4/bin/gcc  -march=i686 -m32 -ffast-math -O3 -DSYSV -DSVR4 -D_REENTRANT -fPIC   -DconfigSPECTRE -I. -I/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/include -c bsource_1_TranFuncLoad.c -o obj/optimize/5.0/bsource_1_TranFuncLoad.o || rm -f -f obj/optimize/5.0/bsource_1_TranFuncLoad.o
+/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/bin/ahdlcc 0 /opt/cadence/mmsim/tools.lnx86/cdsgcc/gcc/4.4/bin/gcc  -march=i686 -m32 -ffast-math -O3 -DSYSV -DSVR4 -D_REENTRANT -fPIC   -DconfigSPECTRE -I. -I/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/include -c bsource_1_HbFuncLoad.c -o obj/optimize/5.0/bsource_1_HbFuncLoad.o || rm -f -f obj/optimize/5.0/bsource_1_HbFuncLoad.o
+Compiling C file bsource_1_OpPointCalc.c (optimize)
+/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/bin/ahdlcc 0 /opt/cadence/mmsim/tools.lnx86/cdsgcc/gcc/4.4/bin/gcc  -march=i686 -m32 -ffast-math -O3 -DSYSV -DSVR4 -D_REENTRANT -fPIC   -DconfigSPECTRE -I. -I/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/include -c bsource_1_OpPointCalc.c -o obj/optimize/5.0/bsource_1_OpPointCalc.o || rm -f -f obj/optimize/5.0/bsource_1_OpPointCalc.o
+Compiling C file bsource_1_cmi_c.c (optimize) with -O0
+/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/bin/ahdlcc 0 /opt/cadence/mmsim/tools.lnx86/cdsgcc/gcc/4.4/bin/gcc  -march=i686 -m32 -ffast-math -O0 -DSYSV -DSVR4 -D_REENTRANT -fPIC   -DconfigSPECTRE -I. -I/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/include -I/opt/cadence/mmsim/tools.lnx86/cmi/include -c bsource_1_cmi_c.c -o obj/optimize/5.0/bsource_1_cmi_c.o || rm -f -f obj/optimize/5.0/bsource_1_cmi_c.o
+<stdin>: In function 'bsource_1_TranFuncDerLoad':
+<stdin>:173: warning: passing argument 1 of 'aslDevInterAddStaticElement' makes pointer from integer without a cast
+/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:1469: note: expected 'void *' but argument is of type 'long int'
+<stdin>:178: warning: passing argument 1 of 'aslDevInterAddDynamicElement' makes pointer from integer without a cast
+/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:1471: note: expected 'void *' but argument is of type 'long int'
+<stdin>:179: warning: passing argument 1 of 'aslDevInterAddDynamicElement' makes pointer from integer without a cast
+/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:1471: note: expected 'void *' but argument is of type 'long int'
+<stdin>: In function 'bsource_1_DcFuncDerLoad':
+<stdin>:164: warning: passing argument 1 of 'aslDevInterAddStaticElement' makes pointer from integer without a cast
+/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:1469: note: expected 'void *' but argument is of type 'long int'
+<stdin>: In function 'bsource_1_pDC_Load':
+<stdin>:604: warning: passing argument 1 of 'aslDevFillZeorDiagonalElemet' makes pointer from integer without a cast
+/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:1882: note: expected 'void *' but argument is of type 'long int'
+<stdin>: In function 'bsource_1_HbFuncLoad':
+<stdin>:185: warning: passing argument 1 of 'aslDevInterAddStaticElement' makes pointer from integer without a cast
+/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:1469: note: expected 'void *' but argument is of type 'long int'
+<stdin>:190: warning: passing argument 1 of 'aslDevInterAddDynamicElement' makes pointer from integer without a cast
+/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:1471: note: expected 'void *' but argument is of type 'long int'
+<stdin>:191: warning: passing argument 1 of 'aslDevInterAddDynamicElement' makes pointer from integer without a cast
+/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:1471: note: expected 'void *' but argument is of type 'long int'
+<stdin>: In function 'bsource_1_pGetMatrixPointers':
+<stdin>:645: warning: assignment from incompatible pointer type
+<stdin>:645: warning: assignment makes integer from pointer without a cast
+<stdin>: In function 'bsource_1_pPreload':
+<stdin>:677: warning: passing argument 1 of 'aslDevInterAddStaticElement' makes pointer from integer without a cast
+/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:1469: note: expected 'void *' but argument is of type 'long int'
+<stdin>: In function 'bsource_1_pAnalTranLoad':
+<stdin>:692: warning: passing argument 1 of 'aslDevFillZeorDiagonalElemet' makes pointer from integer without a cast
+/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:1882: note: expected 'void *' but argument is of type 'long int'
+<stdin>: In function 'bsource_1_pSaveRestart':
+<stdin>:718: warning: passing argument 1 of 'pklGetOpenJar' discards qualifiers from pointer target type
+/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:137: note: expected 'char *' but argument is of type 'devInstID'
+<stdin>:718: warning: passing argument 2 of 'aslDevAvarSR' from incompatible pointer type
+/opt/cadence/mmsim/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:1127: note: expected 'struct ahdlAnalogVar *' but argument is of type 'char *'
+rm -f -rf bsource_1_OpPointCalc.c
+rm -f -rf bsource_1_DcFuncLoad.c
+rm -f -rf bsource_1_TranFuncLoad.c
+rm -f -rf bsource_1_DcFuncDerLoad.c
+rm -f -rf bsource_1_func.c
+rm -f -rf bsource_1_TranFuncDerLoad.c
+rm -f -rf bsource_1_HbFuncLoad.c
+rm -f -rf bsource_1_cmi_c.c
+/opt/cadence/mmsim/tools.lnx86/cdsgcc/gcc/4.4/bin/gcc -shared -O3 -fPIC -o obj/optimize/5.0/bsource_1_libahdlcmi.so ./obj/optimize/5.0/bsource_1_func.o ./obj/optimize/5.0/bsource_1_DcFuncDerLoad.o ./obj/optimize/5.0/bsource_1_DcFuncLoad.o ./obj/optimize/5.0/bsource_1_TranFuncDerLoad.o ./obj/optimize/5.0/bsource_1_TranFuncLoad.o ./obj/optimize/5.0/bsource_1_HbFuncLoad.o ./obj/optimize/5.0/bsource_1_OpPointCalc.o ./obj/optimize/5.0/bsource_1_cmi_c.o  -m32 -Wl,-rpath,/usr/lib -Wl,-rpath,/lib -s 

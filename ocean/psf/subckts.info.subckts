@@ -2,7 +2,7 @@ HEADER
 "PSFversion" "1.00"
 "simulator" "spectre"
 "version" "12.1.1.115.isr13"
-"date" "1:49:34 PM, Wed Aug 30, 2017"
+"date" "6:51:30 PM, Fri Sep 1, 2017"
 "design" "(no title)"
 "analysis type" "info.subckts"
 "analysis name" "subckts"
@@ -29,6 +29,10 @@ VALUE
 ""
 ""
 )
+"CP_1s_cdiode" "subckt" (
+""
+"VF0 VF1 VGND VIN+ VIN- VLG<0> VLG<1> VM VOUT VSG<0> VSG<1>"
+)
 "n_po7w500_18_rf" "subckt" (
 ""
 ""
@@ -36,6 +40,10 @@ VALUE
 "rnppo_mm" "subckt" (
 ""
 ""
+)
+"CP_2s_cdiode" "subckt" (
+""
+"VF0 VF1 VF2 VF3 VGND VIN+ VIN- VLG<0> VLG<1> VLG<2> VLG<3> VM<0> VM<1> VM<2> VOUT VSG<0> VSG<1> VSG<2> VSG<3>"
 )
 "rnhr1000_mm" "subckt" (
 ""
@@ -92,6 +100,10 @@ VALUE
 "varmis_18_rf" "subckt" (
 ""
 ""
+)
+"CP_4s_cdiode" "subckt" (
+""
+"VF0 VF1 VF2 VF3 VF4 VF5 VF6 VF7 VGND VIN+ VIN- VLG<0> VLG<1> VLG<2> VLG<3> VLG<4> VLG<5> VLG<6> VLG<7> VM<0> VM<1> VM<2> VM<3> VM<4> VM<5> VM<6> VOUT VSG<0> VSG<1> VSG<2> VSG<3> VSG<4> VSG<5> VSG<6> VSG<7>"
 )
 "l_slcr20k_rf" "subckt" (
 ""

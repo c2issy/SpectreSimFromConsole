@@ -6,17 +6,19 @@
 # Modification log
 # 8/30/17
 #  -make this file a function, with the input arguments given by main.py
+# 8/31/17
+#  -deal with variable length of VF
 ############################################
 
 import os
 #import pdb
 
-def generateOcn(dir,seperator,oceanFileName,vinp,VF,stopTime,stepSize):
+def generateOcn(dir,seperator,oceanFileName,vinp,VF,startTime,stopTime,stepSize):
 
 	print 'generating "start.ocn" file ...'
 
-	VF0=VF[0]
-	VF1=VF[1]
+	#VF0=VF[0]
+	#VF1=VF[1]
 
 	"""
 	#########################################################
@@ -72,15 +74,24 @@ def generateOcn(dir,seperator,oceanFileName,vinp,VF,stopTime,stepSize):
 	oceanFile.write(s)
 	oceanFile.write(";set initial value of the floating nodes\n")
 	#ic("VF0" 0.3 "VF1" 0.3)
-	s='ic("VF0" {0:.3f} "VF1" {1:.3f})\n'.format(VF0,VF1)
-	oceanFile.write(s)
+	#s='ic("VF0" {0:.3f} "VF1" {1:.3f})\n'.format(VF0,VF1)
+	for i in range(len(VF)):
+		s='ic("VF{0}" {1:.3f})\n'.format(str(i),VF[i])
+		oceanFile.write(s)
 
 	#set up transient simulation
 	oceanFile.write("\n;set up transient simulation\n")
 	oceanFile.write(';analysis(\'dc ?saveOppoint t ?oppoint "rawfile")\n')
 	#analysis('tran ?stop 20n)
-	s="analysis('tran ?stop {0:d}n)\n".format(stopTime)
+	s="analysis('tran ?stop {0:d}n ?errpreset \"moderate\")\n".format(stopTime)
 	oceanFile.write(s)
+
+	#set up save options
+	oceanFile.write("set up save options\n")
+	#delete the defalt save setting
+	oceanFile.write("delete('save)\n")
+	#save voltage of net VOUT
+	oceanFile.write("save( 'v \"VOUT\")")
 
 	#command line to run the simulation
 	oceanFile.write("\n;actually run the simulation\n")
@@ -102,7 +113,7 @@ def generateOcn(dir,seperator,oceanFileName,vinp,VF,stopTime,stepSize):
 	#sample the output transient waveform
 	#outSig=sample(v("VOUT") 0 20n "linear" 0.1n)
         oceanFile.write(";sample the output transient waveform\n")
-	s='outSig=sample(v("VOUT") 0 {0}n "linear" {1}n)\n'.format(stopTime,stepSize)
+	s='outSig=sample(v("VOUT") {0}n {1}n "linear" {2}n)\n'.format(startTime,stopTime,stepSize)
 	oceanFile.write(s)
 	#writing the sampled waveform to output
 	s="ocnPrint( ?output \"{0}\" ?numberNotation 'scientific outSig))\n".format(outFile)

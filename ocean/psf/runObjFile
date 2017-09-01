@@ -1,9 +1,9 @@
 HEADER
 "PSFversion" "1.00"
 "Run Generator" "drlRun rev. 1.0"
-"Run Time Stamp" "Aug 30 13:49:35 2017"
+"Run Time Stamp" "Sep  1 18:51:31 2017"
 "simulator" "spectre"
-"date" "Aug 30 13:49:35 2017"
+"date" "Sep  1 18:51:31 2017"
 "netlistDir" "../autoCP"
 TYPE
 "runObject" STRUCT(

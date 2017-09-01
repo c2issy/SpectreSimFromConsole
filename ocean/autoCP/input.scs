@@ -1,12 +1,12 @@
-parameters vinp=0.3
+parameters vinp=0.15
 // Generated for: spectre
-// Generated on: Aug 22 21:26:48 2017
+// Generated on: Sep  1 17:11:31 2017
 // Design library name: newUMC18
-// Design cell name: ChargePump
+// Design cell name: cp8s
 // Design view name: schematic
 simulator lang=spectre
 global 0
-parameters //vinp
+parameters //vinp=0.3
 include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_bjt_v121.lib.scs" section=tt_bip
 include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_mimcap_v101.lib.scs" section=mimcaps_typ
 include "/research/KAN/UM18/oa/UMC_18_CMOS/../Models/Spectre/mm180_reg18bpw_v123.lib.scs" section=tt
@@ -45,20 +45,70 @@ subckt Cdiode VD VF VLG VS VSG
 ends Cdiode
 // End of subcircuit definition.
 
-// Library name: newUMC18
-// Cell name: ChargePump
+// Library name: myUMC18
+// Cell name: CP_1s_cdiode
 // View name: schematic
-C0 (0 VOUT) mimcaps_mm w=45.0u l=45.0u m=1
-C1 (VIN\+ VM) mimcaps_mm w=45.0u l=45.0u m=1
+subckt CP_1s_cdiode VF0 VF1 VGND VIN\+ VIN\- VLG\<0\> VLG\<1\> VM VOUT \
+        VSG\<0\> VSG\<1\>
+    C0 (VGND VOUT) mimcaps_mm w=45.0u l=45.0u m=1
+    C1 (VIN\+ VM) mimcaps_mm w=45.0u l=45.0u m=1
+    I7 (VIN\- VF0 VLG\<0\> VM VSG\<0\>) Cdiode
+    I6 (VM VF1 VLG\<1\> VOUT VSG\<1\>) Cdiode
+ends CP_1s_cdiode
+// End of subcircuit definition.
+
+// Library name: myUMC18
+// Cell name: CP_2s_cdiode
+// View name: schematic
+subckt CP_2s_cdiode VF0 VF1 VF2 VF3 VGND VIN\+ VIN\- VLG\<0\> VLG\<1\> \
+        VLG\<2\> VLG\<3\> VM\<0\> VM\<1\> VM\<2\> VOUT VSG\<0\> VSG\<1\> \
+        VSG\<2\> VSG\<3\>
+    I1 (VF2 VF3 VGND VIN\+ VM\<1\> VLG\<2\> VLG\<3\> VM\<2\> VOUT VSG\<2\> \
+        VSG\<3\>) CP_1s_cdiode
+    I0 (VF0 VF1 VGND VIN\+ VIN\- VLG\<0\> VLG\<1\> VM\<0\> VM\<1\> \
+        VSG\<0\> VSG\<1\>) CP_1s_cdiode
+ends CP_2s_cdiode
+// End of subcircuit definition.
+
+// Library name: myUMC18
+// Cell name: CP_4s_cdiode
+// View name: schematic
+subckt CP_4s_cdiode VF0 VF1 VF2 VF3 VF4 VF5 VF6 VF7 VGND VIN\+ VIN\- \
+        VLG\<0\> VLG\<1\> VLG\<2\> VLG\<3\> VLG\<4\> VLG\<5\> VLG\<6\> \
+        VLG\<7\> VM\<0\> VM\<1\> VM\<2\> VM\<3\> VM\<4\> VM\<5\> VM\<6\> \
+        VOUT VSG\<0\> VSG\<1\> VSG\<2\> VSG\<3\> VSG\<4\> VSG\<5\> \
+        VSG\<6\> VSG\<7\>
+    I1 (VF4 VF5 VF6 VF7 VGND VIN\+ VM\<3\> VLG\<4\> VLG\<5\> VLG\<6\> \
+        VLG\<7\> VM\<4\> VM\<5\> VM\<6\> VOUT VSG\<4\> VSG\<5\> VSG\<6\> \
+        VSG\<7\>) CP_2s_cdiode
+    I0 (VF0 VF1 VF2 VF3 VGND VIN\+ VIN\- VLG\<0\> VLG\<1\> VLG\<2\> \
+        VLG\<3\> VM\<0\> VM\<1\> VM\<2\> VM\<3\> VSG\<0\> VSG\<1\> \
+        VSG\<2\> VSG\<3\>) CP_2s_cdiode
+ends CP_4s_cdiode
+// End of subcircuit definition.
+
+// Library name: newUMC18
+// Cell name: cp8s
+// View name: schematic
+I1 (VF8 VF9 VF10 VF11 VF12 VF13 VF14 VF15 0 VIN\+ VM\<7\> net19\<0\> \
+        net19\<1\> net19\<2\> net19\<3\> net19\<4\> net19\<5\> net19\<6\> \
+        net19\<7\> net21\<0\> net21\<1\> net21\<2\> net21\<3\> net21\<4\> \
+        net21\<5\> net21\<6\> VOUT net20\<0\> net20\<1\> net20\<2\> \
+        net20\<3\> net20\<4\> net20\<5\> net20\<6\> net20\<7\>) \
+        CP_4s_cdiode
+I0 (VF0 VF1 VF2 VF3 VF4 VF5 VF6 VF7 0 VIN\+ 0 net22\<0\> net22\<1\> \
+        net22\<2\> net22\<3\> net22\<4\> net22\<5\> net22\<6\> net22\<7\> \
+        net24\<0\> net24\<1\> net24\<2\> net24\<3\> net24\<4\> net24\<5\> \
+        net24\<6\> VM\<7\> net23\<0\> net23\<1\> net23\<2\> net23\<3\> \
+        net23\<4\> net23\<5\> net23\<6\> net23\<7\>) CP_4s_cdiode
 V0 (VIN\+ 0) vsource type=sine ampl=vinp freq=1G
-I6 (VM VF1 VLG\<1\> VOUT VSG\<1\>) Cdiode
-I7 (0 VF0 VLG\<0\> VM VSG\<0\>) Cdiode
-ic VF0=0.3 VF1=0.3 
-simulatorOptions options reltol=1e-3 vabstol=1e-5 iabstol=1e-11 temp=27 \
+ic VF15=0.4 VF14=0.4 VF13=0.4 VF12=0.4 VF11=0.4 VF10=0.4 VF9=0.4 VF8=0.4 \
+    VF7=0.4 VF6=0.4 VF5=0.4 VF4=0.4 VF3=0.4 VF2=0.4 VF1=0.4 VF0=0.4 
+simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
     tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
     digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \
     checklimitdest=psf 
-//tran tran stop=20n errpreset=conservative write="spectre.ic" \
+//tran tran stop=5000n errpreset=conservative write="spectre.ic" \
 //    writefinal="spectre.fc" annotate=status maxiters=5 
 //finalTimeOP info what=oppoint where=rawfile
 //modelParameter info what=models where=rawfile
@@ -67,15 +117,16 @@ simulatorOptions options reltol=1e-3 vabstol=1e-5 iabstol=1e-11 temp=27 \
 //designParamVals info what=parameters where=rawfile
 //primitives info what=primitives where=rawfile
 //subckts info what=subckts  where=rawfile
-//save VIN\+ VM VOUT 
+//save VOUT 
 //saveOptions options save=allpub
-ic VF1=0.3 VF0=0.3 
+ic VF15=0.4 VF14=0.4 VF13=0.4 VF12=0.4 VF11=0.4 VF10=0.4 VF9=0.4 VF8=0.4 \
+    VF7=0.4 VF6=0.4 VF5=0.4 VF4=0.4 VF3=0.4 VF2=0.4 VF1=0.4 VF0=0.4 
 simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
     tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
     digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \
     checklimitdest=psf 
-tran tran stop=1e-08 write="spectre.ic" writefinal="spectre.fc" \
-    annotate=status maxiters=5 
+tran tran stop=5e-06 errpreset=moderate write="spectre.ic" \
+    writefinal="spectre.fc" annotate=status maxiters=5 
 finalTimeOP info what=oppoint where=rawfile
 modelParameter info what=models where=rawfile
 element info what=inst where=rawfile
@@ -83,4 +134,4 @@ outputParameter info what=output where=rawfile
 designParamVals info what=parameters where=rawfile
 primitives info what=primitives where=rawfile
 subckts info what=subckts  where=rawfile
-saveOptions options save=allpub
+save VOUT 
